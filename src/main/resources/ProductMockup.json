@@ -1,0 +1,4 @@
+{"id":"1000","description":"Loans secured in real estate","interestRate":3.75,"loanFee":5000,"minimumTerm":120,"maximumTerm":360}
+{"id":"2000","description":"Unsercured loan, short term","interestRate":8,"loanFee":1000,"minimumTerm":1,"maximumTerm":12}
+{"id":"3000","description":"Unsercured loan, 12-36 months","interestRate":10,"loanFee":1250,"minimumTerm":13,"maximumTerm":36}
+{"id":"4000","description":"Unsercured loan, 37-120 months","interestRate":14.25,"loanFee":1500,"minimumTerm":37,"maximumTerm":120}

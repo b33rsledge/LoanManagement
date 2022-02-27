@@ -1,0 +1,134 @@
+openapi: 3.0.3
+servers:
+  - description: Loan Management Specification
+    url: http://msdo.hoejbjerg.family:8080/v1
+info:
+  description: API specification for Loan Management Facade service
+  version: "1.0.0"
+  title: LoanMgmtFacadeAPI
+  contact:
+    email: phg@live.dk
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: LoanFacility
+    description: Loan facility operations
+paths:
+  /LoanFacility/{agreementId}:
+    get:
+      tags:
+        - LoanFacility
+      summary: Retrieve information on a specific loan
+      description: |
+        LirumLarum
+      parameters:
+        - in: path
+          name: agreementId
+          description: agreement key for looking loan facility information
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/agreementItem'
+        '400':
+          description: 'bad input parameter'
+  /ProductManagement/{productTypeId}:
+    get:
+      tags:
+        - ProductManagement
+      summary: Retrieve information on product type
+      description: |
+        LirumLarum
+      parameters:
+        - in: path
+          name: productTypeId
+          description: Key for a product type
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/productType'
+        '400':
+          description: 'bad input parameter'
+    put:
+      tags:
+        - ProductManagement
+      summary: Update information about a producttype, making changes to a product type, may infer updates to all related loan facilities
+      description: Lirum Larum
+      parameters:
+        - in: path
+          name: productTypeId
+          description: agreement to update
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: agreement pudated
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/productType'
+        description: Product type
+
+components:
+  schemas:
+    agreementItem:
+      type: object
+      required:
+        - description
+        - term
+        - productTypeId
+      properties:
+        description:
+          description: yihaa
+          type: string
+          example: LirumLarum
+        term:
+          description: Loan term in months
+          type: integer
+          example: 12
+        productTypeId:
+          description: Product type of the loan
+          type: string
+          example: LirumLarum
+    productType:
+      type: object
+      required:
+        - productTypeId
+        - description
+        - interestRate
+        - loanFee
+      properties:
+        productTypeId:
+          description: Idenfier of the producttype
+        description:
+          description: Desciption of the product type
+          type: string
+          example: LirumLarum
+        interestRate:
+          description: interest rate for the product type
+          type: number
+          example: 5,0
+        loanFee:
+          description: fee for establishing a loan facility of this type
+          type: number
+          example: 1000,00

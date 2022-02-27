@@ -1,0 +1,39 @@
+spring:
+  main:
+    banner-mode: off
+  data:
+    mongodb:
+      host: "localhost"
+      database: "LoanManagement"
+      port:  27017
+      password: CamelsWithFeelings
+      username: lmadmin
+      authentication-database: admin
+management:
+  health:
+    mongo:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+      show-components: never
+
+    # Shutdown endpoint configuration
+    shutdown:
+      enabled: false
+
+  # Actuator endpoint configuration
+  endpoints:
+    web:
+      exposure:
+        include: 'health'
+server:
+  error:
+    include-message: always
+  port: 8080
+#  ssl:
+#    key-store: classpath:${KEYSTORE:keystore.p12}
+#    key-store-password: Maskot99
+#    keyStoreType: PKCS12
+#    keyAlias: caveservice
+debug: false
