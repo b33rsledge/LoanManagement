@@ -1,7 +1,6 @@
 package dk.hoejbjerg.loanmanagement.repository;
 
 import com.google.gson.Gson;
-import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
 import dk.hoejbjerg.loanmanagement.domain.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,16 +14,16 @@ import java.nio.file.Files;
 import java.util.stream.Stream;
 
 @Repository
-public class ProductManagementMongoImpl implements ProductManagementInteface {
-    private static final Logger logger = LoggerFactory.getLogger(ProductManagementMongoImpl.class);
+public class ProductMongoImpl implements ProductInteface {
+    private static final Logger logger = LoggerFactory.getLogger(ProductMongoImpl.class);
     private static final String collection = "product";
 
     @Resource(name = "mongoTemplate")          // 'redisTemplate' is defined as a Bean in Configuration.java
-    private MongoOperations productOps;
+    private MongoOperations productMongo;
 
     public void initialize() {
         // Only initialize if the collection does not already exist.
-        if (productOps.collectionExists(collection)) {
+        if (productMongo.collectionExists(collection)) {
             return;
         }
 
@@ -36,7 +35,7 @@ public class ProductManagementMongoImpl implements ProductManagementInteface {
                 lines.forEach(
                         str -> {
                             Product product = new Gson().fromJson(str, Product.class);
-                            productOps.insert(product);
+                            productMongo.insert(product);
                         }
                 );
             }
@@ -48,10 +47,36 @@ public class ProductManagementMongoImpl implements ProductManagementInteface {
         }
     }
 
-    public LoanFacility updateLoanFacility(String id, LoanFacility lfToUpdate)
-    {
-        return lfToUpdate;
+    public Product updateProduct(String id, Product pToUpdate) {
+        try {
+            Product oProduct = getProduct(id);
+            if (null == oProduct) {
+                logger.error("method=updateProduct, implementationClass=" + this.getClass().getName() + "Product not found");
+            } else {
+                pToUpdate.setId(oProduct.getId());
+                productMongo.save(pToUpdate);
+                return pToUpdate;
+            }
+        } catch (Exception e) {
+            logger.error("method=updateProduct, implementationClass="
+                    + this.getClass().getName()
+                    + "Unable to update: " + e);
+        }
+        return null;
     }
+
+    public Product getProduct(String id) {
+
+        try {
+            return productMongo.findById(id, Product.class);
+        } catch (Exception e) {
+            logger.error("method=updateProduct, implementationClass="
+                    + this.getClass().getName()
+                    + "Unable to find: " + e);
+        }
+        return null;
+    }
+
 }
     /*
     public Room updateRoom(String position, Room roomToUpdate) throws RoomRepositoryException {

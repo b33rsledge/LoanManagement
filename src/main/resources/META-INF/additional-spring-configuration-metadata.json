@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "spring.data.messaging.receive-queue",
+      "type": "java.lang.String",
+      "description": "Description for spring.data.messaging.receive-queue."
+    },
+    {
+      "name": "spring.data.messaging.exchange",
+      "type": "java.lang.String",
+      "description": "Description for spring.data.messaging.exchange."
+    },
+    {
+      "name": "spring.data.messaging.routing-key",
+      "type": "java.lang.String",
+      "description": "Description for spring.data.messaging.routing-key."
+    }
+  ] }

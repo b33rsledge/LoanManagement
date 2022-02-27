@@ -2,6 +2,7 @@ package dk.hoejbjerg.loanmanagement.repository;
 
 import dk.hoejbjerg.loanmanagement.Configuration;
 import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
+import dk.hoejbjerg.loanmanagement.domain.Product;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,8 +16,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -26,13 +25,13 @@ import static org.junit.Assert.assertTrue;
  * @author Peter Højbjerg
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {LoanFacilityMongoImpl.class, Configuration.class})
+@SpringBootTest(classes = {ProductMongoImpl.class, Configuration.class})
 
 @ContextConfiguration()
-public class LoanFacilityInterfaceMongoDBTest {
+public class ProductMongoTest {
 
     @Autowired
-    LoanFacilityMongoImpl storage;
+    ProductMongoImpl storage;
 
     @BeforeEach
     public void setup() {
@@ -40,10 +39,10 @@ public class LoanFacilityInterfaceMongoDBTest {
     }
 
     @Test
-    public void shouldGetFacilitiesForProduct1000() {
-        List<LoanFacility> loans = storage.getFacilitiesByProduct("1000");
-        Assertions.assertTrue(loans.size() > 0);
+    public void shouldGetProduct1000() {
+        Product p = storage.getProduct("1000");
     }
+    /*
     @Test
     public void shouldGetFacilitiesForProduct2000() {
         List<LoanFacility> loans = storage.getFacilitiesByProduct("2000");
@@ -61,5 +60,5 @@ public class LoanFacilityInterfaceMongoDBTest {
         LoanFacility l = storage.getLoanFacility("42");
         Assertions.assertNull(l);
     }
-
+*/
 }

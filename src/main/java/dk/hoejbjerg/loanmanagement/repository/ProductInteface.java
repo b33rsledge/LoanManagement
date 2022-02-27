@@ -10,13 +10,14 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 
 @Repository
-public interface ProductManagementInteface {
+public interface ProductInteface {
 
     String collection = "product";
 
     void initialize();
 
-    LoanFacility updateLoanFacility(String id, LoanFacility lfToUpdate);
+    Product updateProduct(String id, Product pToUpdate);
+    Product getProduct (String id);
 }
     /*
     public Room updateRoom(String position, Room roomToUpdate) throws RoomRepositoryException {

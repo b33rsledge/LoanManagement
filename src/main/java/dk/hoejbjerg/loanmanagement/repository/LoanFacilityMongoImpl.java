@@ -1,8 +1,10 @@
 package dk.hoejbjerg.loanmanagement.repository;
 
 import com.google.gson.Gson;
+import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -20,12 +22,12 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
     private static final Logger logger = LoggerFactory.getLogger(LoanFacilityMongoImpl.class);
 
     @Resource(name = "mongoTemplate")          // 'redisTemplate' is defined as a Bean in Configuration.java
-    private MongoOperations loanFacilityOp;
+    private MongoOperations mongoOperations;
 
     public void initialize() {
 
         // Only initialize if the collection does not already exist.
-        if (loanFacilityOp.collectionExists(collection)) {
+        if (mongoOperations.collectionExists(collection)) {
             return;
         }
 
@@ -38,7 +40,7 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
                 lines.forEach(
                         str -> {
                             dk.hoejbjerg.loanmanagement.domain.LoanFacility facility = new Gson().fromJson(str, dk.hoejbjerg.loanmanagement.domain.LoanFacility.class);
-                            loanFacilityOp.insert(facility);
+                            mongoOperations.insert(facility);
                         }
                 );
             }
@@ -52,23 +54,36 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
 
     /**
      * Find a specific loan from a loan identification
-     * @param id
      * @return LoanFacility
      */
-    public dk.hoejbjerg.loanmanagement.domain.LoanFacility getLoanFacility(String id) {
-        return loanFacilityOp.findById(id, dk.hoejbjerg.loanmanagement.domain.LoanFacility.class);
+    public LoanFacility getLoanFacility(String id) {
+        return mongoOperations.findById(id, LoanFacility.class);
     }
 
     /**
-     *
-     * @param productId
-     * @return
+     * Gert all loan facilities, which are depending on a specific product.
+     * @return LoanFacility
      */
-    public List<dk.hoejbjerg.loanmanagement.domain.LoanFacility> getFacilitiesByProduct(String productId) {
-        Query query = new Query().addCriteria(Criteria.where("ProductTypeId").is(productId));
-        List<dk.hoejbjerg.loanmanagement.domain.LoanFacility> facilities = loanFacilityOp.find(query, dk.hoejbjerg.loanmanagement.domain.LoanFacility.class);
-        return facilities;
+    public List<LoanFacility> getFacilitiesByProduct(String productId) {
+        Query query = new Query()
+                        .addCriteria(Criteria.where("ProductTypeId").is(productId));
+        return mongoOperations.find(query, LoanFacility.class);
     }
+
+    public LoanFacilityPagination getFacilitiesByProductPageable(String productId, Pageable pageable) {
+
+        Query query = new Query()
+                .addCriteria(Criteria.where("ProductTypeId").is(productId))
+                .with(pageable)
+                .skip((long) pageable.getPageSize() * pageable.getPageNumber())
+                .limit(pageable.getPageSize());
+
+        LoanFacilityPagination lPage = new LoanFacilityPagination();
+        lPage.setPageList(mongoOperations.find(query, LoanFacility.class));
+        lPage.setPageable(pageable);
+        return lPage;
+    }
+
 }
 
 

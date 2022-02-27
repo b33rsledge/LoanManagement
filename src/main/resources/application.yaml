@@ -9,6 +9,10 @@ spring:
       password: CamelsWithFeelings
       username: lmadmin
       authentication-database: admin
+    messaging:
+      exchange: LoanManagement
+      routing-key: productupdates
+      receive-queue: productqueue
 management:
   health:
     mongo:
@@ -37,3 +41,4 @@ server:
 #    keyStoreType: PKCS12
 #    keyAlias: caveservice
 debug: false
+
