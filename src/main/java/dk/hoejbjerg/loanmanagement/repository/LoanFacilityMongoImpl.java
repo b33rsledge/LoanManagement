@@ -24,6 +24,10 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
     @Resource(name = "mongoTemplate")          // 'redisTemplate' is defined as a Bean in Configuration.java
     private MongoOperations mongoOperations;
 
+    /**
+     * initialize collection
+     */
+    @Override
     public void initialize() {
 
         // Only initialize if the collection does not already exist.
@@ -31,7 +35,7 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
             return;
         }
 
-        // Read loans from the mockup file and insert them as documents in MongoDB
+        // Read loans from the mockup file and insert them as documents in MongoDB, given that a mockup file exists.
         try {
 
             File file = ResourceUtils.getFile("file:./data/LoanFacilityMockup.json");
@@ -51,25 +55,34 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
                     + "Unable to initialize: " + e);
         }
     }
-
     /**
      * Find a specific loan from a loan identification
+     *
      * @return LoanFacility
      */
+    @Override
     public LoanFacility getLoanFacility(String id) {
         return mongoOperations.findById(id, LoanFacility.class);
     }
 
     /**
      * Gert all loan facilities, which are depending on a specific product.
+     *
      * @return LoanFacility
      */
+    @Override
     public List<LoanFacility> getFacilitiesByProduct(String productId) {
         Query query = new Query()
-                        .addCriteria(Criteria.where("ProductTypeId").is(productId));
+                .addCriteria(Criteria.where("ProductTypeId").is(productId));
         return mongoOperations.find(query, LoanFacility.class);
     }
 
+    /**
+     * Gert all loan facilities, which are depending on a specific product. PageAble i.e. a limited number at a time
+     *
+     * @return LoanFacilityPagination
+     */
+    @Override
     public LoanFacilityPagination getFacilitiesByProductPageable(String productId, Pageable pageable) {
 
         Query query = new Query()
@@ -83,7 +96,6 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
         lPage.setPageable(pageable);
         return lPage;
     }
-
 }
 
 

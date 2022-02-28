@@ -1,40 +1,54 @@
 package dk.hoejbjerg.loanmanagement.repository;
 
-import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.ResourceUtils;
-
-import javax.annotation.Resource;
-import java.io.File;
-import java.nio.file.Files;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Repository
 public interface LoanFacilityInterface {
+
+    /**
+     * Identification of collecton for loan facilities
+     */
     String collection = "loanFacility";
 
+    /**
+     * initialize - loads example data from file if no collection exists
+     */
     void initialize();
 
     /**
      * Find a specific loan from a loan identification
      * @param id
+     *        Identification of a specific loan
      * @return LoanFacility
+     *         The specific loan is returned
      */
-    dk.hoejbjerg.loanmanagement.domain.LoanFacility getLoanFacility(String id);
+    LoanFacility getLoanFacility(String id);
 
     /**
-     *
+     * Get all facilities that are defined as being of a specific product type
      * @param productId
-     * @return
+     *        Product ID for which to return all asociated LoanFacilities
+     * @return List<LoanFacility>
+     *        list of  loan facilities
      */
-    List<dk.hoejbjerg.loanmanagement.domain.LoanFacility> getFacilitiesByProduct(String productId);
+    List<LoanFacility> getFacilitiesByProduct(String productId);
+
+    /**
+     * Get all facilities that are defined as being of a specific product type
+     * @param productId
+     *        Product ID for which to return all asociated LoanFacilities
+     *
+     * @param pageable
+     *        PageRequest (page, size, sort criteria)
+     *        Example:  PageRequest.of(0, 500, Sort.by("id").descending()))
+     *
+     * @return List<LoanFacility>
+     *         list of  loan facilities
+     */
+    LoanFacilityPagination getFacilitiesByProductPageable(String productId, Pageable pageable);
 }
 
 

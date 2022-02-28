@@ -4,10 +4,12 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +49,6 @@ public class Configuration {
                 .applyConnectionString(connectionString)
                 .build();
 
-
         return MongoClients.create(mongoClientSettings);
     }
 
@@ -55,7 +56,6 @@ public class Configuration {
     public MongoTemplate mongoTemplate() {
         return new MongoTemplate(mongo(), Objects.requireNonNull(environment.getProperty("spring.data.mongodb.database")));
     }
-
 
     @Value("${spring.data.messaging.receive-queue}")
     String queueName;
@@ -85,12 +85,4 @@ public class Configuration {
     public MessageConverter jsonMessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
-
-/*    @Bean
-    public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
-        final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(jsonMessageConverter());
-        return rabbitTemplate;
-    }
-*/
 }

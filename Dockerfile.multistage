@@ -7,7 +7,7 @@
 # 1 docker run  --rm  -p 8080:8080  -ti b33rsledge/loanmgmt:b001
 
 #-----------------------------------------------------------------------------------------------------------------------
-#BUILDER
+# BUILDER
 #-----------------------------------------------------------------------------------------------------------------------
 FROM gradle:6.9.1-jdk11 as builder
 
@@ -50,7 +50,7 @@ RUN apk add dumb-init
 # Add javausers group
 RUN addgroup -S javausers
 
-# Add csuser to javausers group
+# Add user to javausers group
 RUN adduser -S -s /bin/false -G javausers lmuser
 
 # Set ownership to javausers group
