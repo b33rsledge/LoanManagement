@@ -1,0 +1,100 @@
+{"id":1,"description":"Blue-faced booby","frequency":"Monthly","amount":1500}
+{"id":2,"description":"Caracara (unidentified)","frequency":"Anually","amount":500}
+{"id":3,"description":"Armadillo, common long-nosed","frequency":"Monthly","amount":100}
+{"id":4,"description":"Cormorant, javanese","frequency":"Once","amount":1000}
+{"id":5,"description":"Arctic ground squirrel","frequency":"Once","amount":250}
+{"id":6,"description":"Yellow-billed hornbill","frequency":"Once","amount":500}
+{"id":7,"description":"Common goldeneye","frequency":"SemiAnually","amount":250}
+{"id":8,"description":"Red phalarope","frequency":"SemiAnually","amount":100}
+{"id":9,"description":"Tortoise, galapagos","frequency":"Quarterly","amount":1000}
+{"id":10,"description":"Phalarope, northern","frequency":"Monthly","amount":1500}
+{"id":11,"description":"Laughing kookaburra","frequency":"Anually","amount":500}
+{"id":12,"description":"Sandhill crane","frequency":"Once","amount":1000}
+{"id":13,"description":"Marshbird, brown and yellow","frequency":"Quarterly","amount":100}
+{"id":14,"description":"Gecko, barking","frequency":"Anually","amount":100}
+{"id":15,"description":"Stick insect","frequency":"Quarterly","amount":500}
+{"id":16,"description":"Lizard, mexican beaded","frequency":"Quarterly","amount":1500}
+{"id":17,"description":"Flamingo, lesser","frequency":"Anually","amount":1500}
+{"id":18,"description":"Plover, three-banded","frequency":"Once","amount":500}
+{"id":19,"description":"Wombat, southern hairy-nosed","frequency":"SemiAnually","amount":100}
+{"id":20,"description":"Glider, squirrel","frequency":"Anually","amount":1000}
+{"id":21,"description":"Cat, european wild","frequency":"Quarterly","amount":1000}
+{"id":22,"description":"Shrew, mandras tree","frequency":"Once","amount":100}
+{"id":23,"description":"Dingo","frequency":"SemiAnually","amount":250}
+{"id":24,"description":"Coke's hartebeest","frequency":"Quarterly","amount":500}
+{"id":25,"description":"Red lava crab","frequency":"Once","amount":1500}
+{"id":26,"description":"Timber wolf","frequency":"Quarterly","amount":250}
+{"id":27,"description":"Thirteen-lined squirrel","frequency":"Monthly","amount":250}
+{"id":28,"description":"Common dolphin","frequency":"Monthly","amount":250}
+{"id":29,"description":"Lizard, desert spiny","frequency":"Once","amount":100}
+{"id":30,"description":"Eagle, bald","frequency":"Once","amount":250}
+{"id":31,"description":"Tayra","frequency":"Monthly","amount":250}
+{"id":32,"description":"Nine-banded armadillo","frequency":"Once","amount":100}
+{"id":33,"description":"Camel, dromedary","frequency":"Monthly","amount":100}
+{"id":34,"description":"Squirrel, thirteen-lined","frequency":"Once","amount":1000}
+{"id":35,"description":"Black-winged stilt","frequency":"Once","amount":1000}
+{"id":36,"description":"Dragon, komodo","frequency":"Quarterly","amount":1000}
+{"id":37,"description":"Eagle, golden","frequency":"Quarterly","amount":100}
+{"id":38,"description":"American Virginia opossum","frequency":"SemiAnually","amount":1000}
+{"id":39,"description":"Iguana, land","frequency":"Once","amount":100}
+{"id":40,"description":"Deer, roe","frequency":"Anually","amount":1000}
+{"id":41,"description":"Four-spotted skimmer","frequency":"Anually","amount":1000}
+{"id":42,"description":"White spoonbill","frequency":"Once","amount":1000}
+{"id":43,"description":"Thrasher, curve-billed","frequency":"SemiAnually","amount":100}
+{"id":44,"description":"Racer snake","frequency":"Monthly","amount":1000}
+{"id":45,"description":"Tokay gecko","frequency":"Quarterly","amount":250}
+{"id":46,"description":"Dolphin, common","frequency":"SemiAnually","amount":250}
+{"id":47,"description":"Yellow-bellied marmot","frequency":"Monthly","amount":500}
+{"id":48,"description":"Mockingbird, galapagos","frequency":"Monthly","amount":1500}
+{"id":49,"description":"Two-toed tree sloth","frequency":"SemiAnually","amount":1000}
+{"id":50,"description":"Penguin, magellanic","frequency":"Once","amount":500}
+{"id":51,"description":"Comb duck","frequency":"Quarterly","amount":1500}
+{"id":52,"description":"Beisa oryx","frequency":"Once","amount":250}
+{"id":53,"description":"Cockatoo, long-billed","frequency":"Quarterly","amount":1500}
+{"id":54,"description":"Bush dog","frequency":"Monthly","amount":100}
+{"id":55,"description":"Swallow (unidentified)","frequency":"Anually","amount":250}
+{"id":56,"description":"Lesser flamingo","frequency":"Monthly","amount":250}
+{"id":57,"description":"Canadian tiger swallowtail butterfly","frequency":"Quarterly","amount":250}
+{"id":58,"description":"Heron, gray","frequency":"Monthly","amount":500}
+{"id":59,"description":"Egyptian cobra","frequency":"Monthly","amount":100}
+{"id":60,"description":"Wallaby, agile","frequency":"Quarterly","amount":100}
+{"id":61,"description":"Desert tortoise","frequency":"Anually","amount":250}
+{"id":62,"description":"Swan, trumpeter","frequency":"Once","amount":1500}
+{"id":63,"description":"Brush-tailed rat kangaroo","frequency":"Anually","amount":500}
+{"id":64,"description":"Mongoose, banded","frequency":"Monthly","amount":500}
+{"id":65,"description":"Boa, emerald green tree","frequency":"Monthly","amount":1000}
+{"id":66,"description":"Gull, lava","frequency":"Once","amount":500}
+{"id":67,"description":"Cape Barren goose","frequency":"Once","amount":100}
+{"id":68,"description":"North American porcupine","frequency":"Monthly","amount":100}
+{"id":69,"description":"Lemur, lesser mouse","frequency":"Once","amount":500}
+{"id":70,"description":"Shelduck, common","frequency":"Monthly","amount":100}
+{"id":71,"description":"Otter, cape clawless","frequency":"Monthly","amount":100}
+{"id":72,"description":"Blue catfish","frequency":"Monthly","amount":100}
+{"id":73,"description":"Canadian tiger swallowtail butterfly","frequency":"Anually","amount":1000}
+{"id":74,"description":"Blue peacock","frequency":"Quarterly","amount":1000}
+{"id":75,"description":"Bengal vulture","frequency":"Anually","amount":1000}
+{"id":76,"description":"Lemming, arctic","frequency":"Once","amount":1000}
+{"id":77,"description":"Eland, common","frequency":"Monthly","amount":1500}
+{"id":78,"description":"Eagle, crowned","frequency":"Anually","amount":1000}
+{"id":79,"description":"Genet, small-spotted","frequency":"Anually","amount":500}
+{"id":80,"description":"Little heron","frequency":"Quarterly","amount":1000}
+{"id":81,"description":"Brazilian tapir","frequency":"Monthly","amount":1000}
+{"id":82,"description":"Jaguarundi","frequency":"Monthly","amount":100}
+{"id":83,"description":"Bear, sloth","frequency":"Anually","amount":250}
+{"id":84,"description":"Cuis","frequency":"Anually","amount":500}
+{"id":85,"description":"Shrike, crimson-breasted","frequency":"Quarterly","amount":500}
+{"id":86,"description":"Alligator, american","frequency":"Monthly","amount":100}
+{"id":87,"description":"Crow, pied","frequency":"Anually","amount":500}
+{"id":88,"description":"Hummingbird (unidentified)","frequency":"Monthly","amount":1500}
+{"id":89,"description":"Stork, openbill","frequency":"SemiAnually","amount":100}
+{"id":90,"description":"Whip-tailed wallaby","frequency":"Once","amount":500}
+{"id":91,"description":"Turaco, violet-crested","frequency":"Quarterly","amount":500}
+{"id":92,"description":"Waterbuck, common","frequency":"Quarterly","amount":500}
+{"id":93,"description":"Glider, sugar","frequency":"Anually","amount":500}
+{"id":94,"description":"Cook's tree boa","frequency":"Monthly","amount":250}
+{"id":95,"description":"Common melba finch","frequency":"Monthly","amount":1000}
+{"id":96,"description":"Colobus, magistrate black","frequency":"Once","amount":500}
+{"id":97,"description":"Nelson ground squirrel","frequency":"Once","amount":1000}
+{"id":98,"description":"Red-winged blackbird","frequency":"Quarterly","amount":1000}
+{"id":99,"description":"Crowned hawk-eagle","frequency":"Quarterly","amount":500}
+{"id":100,"description":"Tortoise, asian foreset","frequency":"Anually","amount":1500}

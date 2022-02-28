@@ -1,4 +1,100 @@
-{"id":"1000","description":"Loans secured in real estate","interestRate":3.75,"loanFee":5000,"minimumTerm":120,"maximumTerm":360}
-{"id":"2000","description":"Unsercured loan, short term","interestRate":8,"loanFee":1000,"minimumTerm":1,"maximumTerm":12}
-{"id":"3000","description":"Unsercured loan, 12-36 months","interestRate":10,"loanFee":1250,"minimumTerm":13,"maximumTerm":36}
-{"id":"4000","description":"Unsercured loan, 37-120 months","interestRate":14.25,"loanFee":1500,"minimumTerm":37,"maximumTerm":120}
+{"id":1,"description":"Seixo da Beira","interestRate":5.5,"feeType":1,"minimumTerm":7,"maximumTerm":55}
+{"id":2,"description":"Wojsławice","interestRate":8.75,"feeType":2,"minimumTerm":5,"maximumTerm":155}
+{"id":3,"description":"Jaboatão dos Guararapes","interestRate":7.5,"feeType":3,"minimumTerm":8,"maximumTerm":387}
+{"id":4,"description":"São Bartolomeu","interestRate":6.75,"feeType":4,"minimumTerm":4,"maximumTerm":302}
+{"id":5,"description":"Zaoshi","interestRate":12,"feeType":5,"minimumTerm":10,"maximumTerm":66}
+{"id":6,"description":"Biguo","interestRate":8.75,"feeType":6,"minimumTerm":5,"maximumTerm":308}
+{"id":7,"description":"Pluak Daeng","interestRate":9.5,"feeType":7,"minimumTerm":3,"maximumTerm":263}
+{"id":8,"description":"Viñac","interestRate":4,"feeType":8,"minimumTerm":11,"maximumTerm":288}
+{"id":9,"description":"Korobitsyno","interestRate":12.25,"feeType":9,"minimumTerm":4,"maximumTerm":134}
+{"id":10,"description":"Śródmieście","interestRate":6.75,"feeType":10,"minimumTerm":9,"maximumTerm":388}
+{"id":11,"description":"Biguaçu","interestRate":6.25,"feeType":11,"minimumTerm":9,"maximumTerm":126}
+{"id":12,"description":"Tilamuta","interestRate":8.75,"feeType":12,"minimumTerm":11,"maximumTerm":358}
+{"id":13,"description":"Zhangxiong","interestRate":11.5,"feeType":13,"minimumTerm":9,"maximumTerm":248}
+{"id":14,"description":"Ar Riqāb","interestRate":8.25,"feeType":14,"minimumTerm":8,"maximumTerm":400}
+{"id":15,"description":"San Miguel","interestRate":13.25,"feeType":15,"minimumTerm":4,"maximumTerm":303}
+{"id":16,"description":"Muzambinho","interestRate":4.75,"feeType":16,"minimumTerm":9,"maximumTerm":160}
+{"id":17,"description":"Kalývia","interestRate":5.5,"feeType":17,"minimumTerm":6,"maximumTerm":62}
+{"id":18,"description":"Cañaveral","interestRate":14,"feeType":18,"minimumTerm":1,"maximumTerm":252}
+{"id":19,"description":"São José dos Pinhais","interestRate":14.25,"feeType":19,"minimumTerm":5,"maximumTerm":339}
+{"id":20,"description":"Agbani","interestRate":6.75,"feeType":20,"minimumTerm":12,"maximumTerm":320}
+{"id":21,"description":"Lewolen","interestRate":6.25,"feeType":21,"minimumTerm":11,"maximumTerm":138}
+{"id":22,"description":"Gierłoż","interestRate":8.25,"feeType":22,"minimumTerm":5,"maximumTerm":53}
+{"id":23,"description":"Yanguan","interestRate":8.75,"feeType":23,"minimumTerm":12,"maximumTerm":219}
+{"id":24,"description":"Gò Quao","interestRate":3.75,"feeType":24,"minimumTerm":8,"maximumTerm":380}
+{"id":25,"description":"Huichang","interestRate":8.75,"feeType":25,"minimumTerm":7,"maximumTerm":94}
+{"id":26,"description":"Sukarara Utara","interestRate":6,"feeType":26,"minimumTerm":12,"maximumTerm":23}
+{"id":27,"description":"Qianchuan","interestRate":4.5,"feeType":27,"minimumTerm":12,"maximumTerm":386}
+{"id":28,"description":"El Limon","interestRate":6,"feeType":28,"minimumTerm":12,"maximumTerm":302}
+{"id":29,"description":"Jandaia do Sul","interestRate":7,"feeType":29,"minimumTerm":2,"maximumTerm":197}
+{"id":30,"description":"Hässelby","interestRate":13,"feeType":30,"minimumTerm":8,"maximumTerm":35}
+{"id":31,"description":"Menggala","interestRate":11,"feeType":31,"minimumTerm":5,"maximumTerm":315}
+{"id":32,"description":"Shirochanka","interestRate":10,"feeType":32,"minimumTerm":1,"maximumTerm":90}
+{"id":33,"description":"Kuching","interestRate":7.75,"feeType":33,"minimumTerm":7,"maximumTerm":362}
+{"id":34,"description":"Nandulehe","interestRate":3.75,"feeType":34,"minimumTerm":3,"maximumTerm":198}
+{"id":35,"description":"Yaring","interestRate":4.5,"feeType":35,"minimumTerm":12,"maximumTerm":71}
+{"id":36,"description":"Waipukang","interestRate":12,"feeType":36,"minimumTerm":2,"maximumTerm":391}
+{"id":37,"description":"Zhengyangshan","interestRate":13.25,"feeType":37,"minimumTerm":3,"maximumTerm":362}
+{"id":38,"description":"Sumberagung","interestRate":7.25,"feeType":38,"minimumTerm":4,"maximumTerm":27}
+{"id":39,"description":"Nakhabino","interestRate":11.75,"feeType":39,"minimumTerm":5,"maximumTerm":249}
+{"id":40,"description":"San Pedro","interestRate":13.5,"feeType":40,"minimumTerm":7,"maximumTerm":75}
+{"id":41,"description":"Crespo","interestRate":9.5,"feeType":41,"minimumTerm":3,"maximumTerm":268}
+{"id":42,"description":"Sanjie","interestRate":10,"feeType":42,"minimumTerm":9,"maximumTerm":339}
+{"id":43,"description":"Jazovo","interestRate":10,"feeType":43,"minimumTerm":10,"maximumTerm":176}
+{"id":44,"description":"Hofors","interestRate":6,"feeType":44,"minimumTerm":4,"maximumTerm":372}
+{"id":45,"description":"Silae","interestRate":12.5,"feeType":45,"minimumTerm":12,"maximumTerm":380}
+{"id":46,"description":"Cachoeirinha","interestRate":12,"feeType":46,"minimumTerm":6,"maximumTerm":73}
+{"id":47,"description":"Douala","interestRate":13.5,"feeType":47,"minimumTerm":8,"maximumTerm":68}
+{"id":48,"description":"Isangel","interestRate":14,"feeType":48,"minimumTerm":12,"maximumTerm":261}
+{"id":49,"description":"eSikhawini","interestRate":6.75,"feeType":49,"minimumTerm":10,"maximumTerm":21}
+{"id":50,"description":"Bugis","interestRate":8.25,"feeType":50,"minimumTerm":12,"maximumTerm":232}
+{"id":51,"description":"Chiang Yuen","interestRate":7.5,"feeType":51,"minimumTerm":6,"maximumTerm":44}
+{"id":52,"description":"Bofuer","interestRate":4.25,"feeType":52,"minimumTerm":2,"maximumTerm":146}
+{"id":53,"description":"Merritt","interestRate":13.75,"feeType":53,"minimumTerm":7,"maximumTerm":146}
+{"id":54,"description":"Apurawan","interestRate":8.75,"feeType":54,"minimumTerm":8,"maximumTerm":86}
+{"id":55,"description":"Shipaidong","interestRate":4.5,"feeType":55,"minimumTerm":2,"maximumTerm":203}
+{"id":56,"description":"Limoges","interestRate":5,"feeType":56,"minimumTerm":11,"maximumTerm":94}
+{"id":57,"description":"Baranti","interestRate":14.5,"feeType":57,"minimumTerm":12,"maximumTerm":305}
+{"id":58,"description":"Garça","interestRate":13.75,"feeType":58,"minimumTerm":6,"maximumTerm":154}
+{"id":59,"description":"Michurinskoye","interestRate":11,"feeType":59,"minimumTerm":7,"maximumTerm":120}
+{"id":60,"description":"Ladushkin","interestRate":14.75,"feeType":60,"minimumTerm":11,"maximumTerm":308}
+{"id":61,"description":"Alpūrai","interestRate":10,"feeType":61,"minimumTerm":1,"maximumTerm":276}
+{"id":62,"description":"Nakanojōmachi","interestRate":13.5,"feeType":62,"minimumTerm":12,"maximumTerm":241}
+{"id":63,"description":"Pandan","interestRate":9.5,"feeType":63,"minimumTerm":9,"maximumTerm":260}
+{"id":64,"description":"Yorii","interestRate":11.25,"feeType":64,"minimumTerm":10,"maximumTerm":116}
+{"id":65,"description":"Kowalewo Pomorskie","interestRate":7.75,"feeType":65,"minimumTerm":2,"maximumTerm":339}
+{"id":66,"description":"Jambean","interestRate":13.75,"feeType":66,"minimumTerm":10,"maximumTerm":199}
+{"id":67,"description":"Si’en","interestRate":7,"feeType":67,"minimumTerm":11,"maximumTerm":227}
+{"id":68,"description":"Thới Bình","interestRate":10,"feeType":68,"minimumTerm":5,"maximumTerm":127}
+{"id":69,"description":"Ngrambitan","interestRate":3.75,"feeType":69,"minimumTerm":12,"maximumTerm":298}
+{"id":70,"description":"Maniowy","interestRate":3.75,"feeType":70,"minimumTerm":6,"maximumTerm":113}
+{"id":71,"description":"Xinxing","interestRate":9.75,"feeType":71,"minimumTerm":2,"maximumTerm":68}
+{"id":72,"description":"Achanizo","interestRate":4.75,"feeType":72,"minimumTerm":2,"maximumTerm":297}
+{"id":73,"description":"El Limon","interestRate":12.5,"feeType":73,"minimumTerm":9,"maximumTerm":38}
+{"id":74,"description":"San José","interestRate":13.5,"feeType":74,"minimumTerm":11,"maximumTerm":87}
+{"id":75,"description":"Granada","interestRate":11.25,"feeType":75,"minimumTerm":6,"maximumTerm":255}
+{"id":76,"description":"Selnica","interestRate":8.75,"feeType":76,"minimumTerm":12,"maximumTerm":116}
+{"id":77,"description":"Mancilang","interestRate":14.25,"feeType":77,"minimumTerm":5,"maximumTerm":233}
+{"id":78,"description":"Balading","interestRate":8,"feeType":78,"minimumTerm":10,"maximumTerm":261}
+{"id":79,"description":"Auriflama","interestRate":7,"feeType":79,"minimumTerm":6,"maximumTerm":192}
+{"id":80,"description":"Thị Trấn Mộc Châu","interestRate":14,"feeType":80,"minimumTerm":12,"maximumTerm":170}
+{"id":81,"description":"Övertorneå","interestRate":10.75,"feeType":81,"minimumTerm":2,"maximumTerm":77}
+{"id":82,"description":"Drammen","interestRate":4.5,"feeType":82,"minimumTerm":5,"maximumTerm":72}
+{"id":83,"description":"Rainis","interestRate":4.5,"feeType":83,"minimumTerm":10,"maximumTerm":233}
+{"id":84,"description":"Saint-Paul","interestRate":5,"feeType":84,"minimumTerm":1,"maximumTerm":344}
+{"id":85,"description":"Yijing","interestRate":12.75,"feeType":85,"minimumTerm":1,"maximumTerm":186}
+{"id":86,"description":"Albrechtice","interestRate":14.5,"feeType":86,"minimumTerm":7,"maximumTerm":199}
+{"id":87,"description":"Houston","interestRate":4,"feeType":87,"minimumTerm":5,"maximumTerm":349}
+{"id":88,"description":"Mandalgovi","interestRate":6,"feeType":88,"minimumTerm":2,"maximumTerm":333}
+{"id":89,"description":"Jaqué","interestRate":13.25,"feeType":89,"minimumTerm":3,"maximumTerm":110}
+{"id":90,"description":"Fontenay-sous-Bois","interestRate":10,"feeType":90,"minimumTerm":2,"maximumTerm":321}
+{"id":91,"description":"Kamogatachō-kamogata","interestRate":12.5,"feeType":91,"minimumTerm":6,"maximumTerm":363}
+{"id":92,"description":"Kafr Nubl","interestRate":6.75,"feeType":92,"minimumTerm":2,"maximumTerm":178}
+{"id":93,"description":"Subic","interestRate":5,"feeType":93,"minimumTerm":7,"maximumTerm":196}
+{"id":94,"description":"Caijiagang","interestRate":7.5,"feeType":94,"minimumTerm":11,"maximumTerm":198}
+{"id":95,"description":"San Emilio","interestRate":6.25,"feeType":95,"minimumTerm":3,"maximumTerm":390}
+{"id":96,"description":"El Bagre","interestRate":10.5,"feeType":96,"minimumTerm":11,"maximumTerm":122}
+{"id":97,"description":"Nizhnedevitsk","interestRate":5.75,"feeType":97,"minimumTerm":5,"maximumTerm":134}
+{"id":98,"description":"Bagan","interestRate":13.75,"feeType":98,"minimumTerm":2,"maximumTerm":269}
+{"id":99,"description":"San Roque","interestRate":13.25,"feeType":99,"minimumTerm":7,"maximumTerm":153}
+{"id":100,"description":"Wasagu","interestRate":12.25,"feeType":100,"minimumTerm":3,"maximumTerm":186}

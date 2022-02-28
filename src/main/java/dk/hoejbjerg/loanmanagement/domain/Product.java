@@ -15,7 +15,7 @@ public class Product implements  Serializable{
     private @Id String id;
     private String  description;
     private double interestRate;
-    private double loanFee;
+    private int feeType;
     private int minimumTerm;
     private int maximumTerm;
 }

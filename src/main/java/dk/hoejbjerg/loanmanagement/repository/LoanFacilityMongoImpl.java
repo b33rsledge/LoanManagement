@@ -35,6 +35,7 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
             return;
         }
 
+
         // Read loans from the mockup file and insert them as documents in MongoDB, given that a mockup file exists.
         try {
 
@@ -46,13 +47,14 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
                             dk.hoejbjerg.loanmanagement.domain.LoanFacility facility = new Gson().fromJson(str, dk.hoejbjerg.loanmanagement.domain.LoanFacility.class);
                             mongoOperations.insert(facility);
                         }
+
                 );
                 logger.info("Loan facility mockup data has been preloaded");
             }
         } catch (Exception e) {
             logger.error("method=initialize, implementationClass="
                     + this.getClass().getName()
-                    + "Unable to initialize: " + e);
+                    + "Unable to initialize: " + e );
         }
     }
     /**
