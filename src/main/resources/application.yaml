@@ -17,15 +17,15 @@ management:
   health:
     mongo:
       enabled: false
+    rabbit:
+      enabled: false
   endpoint:
     health:
       show-details: always
       show-components: never
-
     # Shutdown endpoint configuration
     shutdown:
       enabled: false
-
   # Actuator endpoint configuration
   endpoints:
     web:
@@ -35,10 +35,5 @@ server:
   error:
     include-message: always
   port: 8080
-#  ssl:
-#    key-store: classpath:${KEYSTORE:keystore.p12}
-#    key-store-password: Maskot99
-#    keyStoreType: PKCS12
-#    keyAlias: caveservice
 debug: false
 

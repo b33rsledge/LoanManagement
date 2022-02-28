@@ -34,7 +34,7 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
         // Read loans from the mockup file and insert them as documents in MongoDB
         try {
 
-            File file = ResourceUtils.getFile("classpath:LoanFacilityMockup.json");
+            File file = ResourceUtils.getFile("file:./data/LoanFacilityMockup.json");
             if (file.exists()) {
                 Stream<String> lines = new String(Files.readAllBytes(file.toPath())).lines();
                 lines.forEach(
@@ -43,8 +43,8 @@ public class LoanFacilityMongoImpl implements LoanFacilityInterface {
                             mongoOperations.insert(facility);
                         }
                 );
+                logger.info("Loan facility mockup data has been preloaded");
             }
-            logger.info("Loan Facility mockup data has been preloaded");
         } catch (Exception e) {
             logger.error("method=initialize, implementationClass="
                     + this.getClass().getName()

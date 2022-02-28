@@ -1,0 +1,500 @@
+PUT http://localhost:8080/v1/product/2000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Jow jow",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-28T081133.400.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-28T081119.404.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/v1/product/2000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Jow jow",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T155826.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T154922.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T145949.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T145403.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T144049.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T143627.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T141205.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T133506.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T132325.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/1000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T125428.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T114148.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T112714.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T112251.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T112039.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/4000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T112024.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Gotcha",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T112005.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Unsercured loan, 37-120 months",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-27T111930.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    _id: '',
+    description: 'Unsercured loan, 37-120 months',
+    interestRate: 14.25,
+    loanFee: 1500,
+    minimumTerm: 37,
+    maximumTerm: 120,
+    _class: 'dk.hoejbjerg.loanmanagement.domain.Product'
+}
+###
+
+GET http://localhost:8080/v1/product/5000
+
+<> 2022-02-27T111813.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-02-27T111628.400.json
+
+###
+
+GET http://localhost:8080/v1/product/1000
+
+<> 2022-02-27T111436-2.200.json
+
+###
+
+GET http://localhost:8080/v1/product/2000
+
+<> 2022-02-27T111436-1.200.json
+
+###
+
+GET http://localhost:8080/v1/product/3000
+
+<> 2022-02-27T111436.200.json
+
+###
+
+GET http://localhost:8080/v1/product/4000
+
+<> 2022-02-27T111435.200.json
+
+###
+
+GET http://localhost:8080/v1/product/5000
+
+<> 2022-02-27T111435.404.json
+
+###
+
+GET http://localhost:8080/v1/product/1000
+
+<> 2022-02-27T111409.200.json
+
+###
+
+GET http://localhost:8080/v1/product/2000
+
+<> 2022-02-27T111407.200.json
+
+###
+
+GET http://localhost:8080/v1/product/3000
+
+<> 2022-02-27T111404.200.json
+
+###
+
+GET http://localhost:8080/v1/product/4000
+
+<> 2022-02-27T111359.200.json
+
+###
+
+GET http://localhost:8080/v1/product/5000
+
+<> 2022-02-27T111349.404.json
+
+###
+
+GET http://localhost:8080/v1/product/1000
+
+<> 2022-02-27T111321.405.json
+
+###
+
+GET http://localhost:8080/v1/product/1000
+
+<> 2022-02-27T111253.405.json
+
+###
+
+GET http://localhost:8080/v1/product/5000
+
+<> 2022-02-27T111240.405.json
+
+###
+
+GET http://localhost:8080/v1/Product/1000
+
+<> 2022-02-27T111150.200.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-26T145109.200.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-26T145103.200.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-26T145058.200.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-26T145036.200.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
+Accept: application/json
+
+<> 2022-02-26T144808.200.json
+
+###
+

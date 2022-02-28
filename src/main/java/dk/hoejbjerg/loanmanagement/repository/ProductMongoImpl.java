@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
@@ -23,14 +24,16 @@ public class ProductMongoImpl implements ProductInteface {
 
     public void initialize() {
         // Only initialize if the collection does not already exist.
-        if (productMongo.collectionExists(collection)) {
-            return;
-        }
+  //     if (productMongo.collectionExists(collection)) {
+    //        return;
+      //  }
+        logger.info("Initializing product data: starting");
+        File file;
 
-        // Read loans from the mockup file and insert them as documents in MongoDB
         try {
-            File file = ResourceUtils.getFile("classpath:ProductMockup.json");
+            file = ResourceUtils.getFile("file:./data/LoanFacilityMockup.json");
             if (file.exists()) {
+                logger.info("Initializing product data: Reading data");
                 Stream<String> lines = new String(Files.readAllBytes(file.toPath())).lines();
                 lines.forEach(
                         str -> {
@@ -38,12 +41,11 @@ public class ProductMongoImpl implements ProductInteface {
                             productMongo.insert(product);
                         }
                 );
+                logger.info("Product mockup data has been preloaded");
             }
-            logger.info("Product mockup data has been preloaded");
         } catch (Exception e) {
             logger.error("method=initialize, implementationClass="
-                    + this.getClass().getName()
-                    + "Unable to initialize: " + e);
+                  + "PRODUCT - Unable to initialize: " + e);
         }
     }
 

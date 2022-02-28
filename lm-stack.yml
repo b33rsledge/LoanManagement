@@ -6,6 +6,50 @@ version: '3.4'
 
 # docker service ls
 services:
+  loanservice:
+    image: b33rsledge/loanmgmt:b001
+
+    environment:
+      spring.main.banner-mode: "off"
+
+      # Mongo DB configuration
+      spring.data.mongodb.host: mongoservice
+      spring.data.mongodb.database: "LoanManagement"
+      spring.data.mongodb.port: 27017
+      spring.data.mongodb.password: "CamelsWithFeelings"
+      spring.data.mongodb.username: "lmadmin"
+      spring.data.mongodb.authentication-database: "admin"
+
+      # Message queue configuration
+      spring.rabbitmq.host: rabbitmq
+      spring.rabbitmq.port: 5672
+      spring.data.messaging.exchange: "LoanManagement"
+      spring.data.messaging.routing-key: "productupdates"
+      spring.data.messaging.receive-queue: "productqueue"
+
+      # Debug enabled/disabled
+      debug: "false"
+    ports:
+      - "8080:8080"
+    networks:
+      - lm-network
+    depends_on:  #not working in swarm mode
+      - mongoservice
+      - rabbitmq
+    command: java -jar /usr/loanmgmt/service.jar
+    # Health check options
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+    # Deployment options
+    deploy:
+      replicas: 1
+      restart_policy:
+        delay: 5s
+        max_attempts: 3
   mongoservice:
     image: mongo
     environment:
@@ -37,6 +81,18 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: lmadmin
       ME_CONFIG_MONGODB_ADMINPASSWORD: CamelsWithFeelings
       ME_CONFIG_MONGODB_URL: mongodb://lmadmin:CamelsWithFeelings@mongoservice:27017
+    networks:
+      - lm-network
+  rabbitmq:
+    image: rabbitmq:3.9-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
+      - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/data/:/var/lib/rabbitmq/
+      - ./rabbitmq/log/:/var/log/rabbitmq
     networks:
       - lm-network
 volumes:
