@@ -8,6 +8,6 @@ public class FeeType implements Serializable {
     private static final long serialVersionUID = -1L;
     private @Id String id;
     private String  description;
-    private int frequency;
+    private String frequency;
     private double amount;
 }

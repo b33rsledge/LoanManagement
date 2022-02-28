@@ -1,3 +1,54 @@
+PUT http://localhost:8080/v1/product/10
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-28T212318.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/10
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-02-28T212249.400.json
+
+###
+
+GET http://localhost:8080/v1/LoanFacility/30cbaccb-dd34-4b3b-83a7-64a8a5a1c7da
+Accept: application/json
+
+<> 2022-02-28T212235.200.json
+
+###
+
+GET http://localhost:8080/v1/product/10
+
+<> 2022-02-28T212204.200.json
+
+###
+
+GET http://localhost:8080/v1/feetype/45
+Accept: application/json
+
+<> 2022-02-28T212148.200.json
+
+###
+
+GET http://localhost:8080/v1/feetype/{id}
+Accept: application/json
+
+###
+
 PUT http://localhost:8080/v1/product/2000
 Accept: application/json
 Content-Type: application/json
@@ -547,34 +598,6 @@ GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
 Accept: application/json
 
 <> 2022-02-26T145109.200.json
-
-###
-
-GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
-Accept: application/json
-
-<> 2022-02-26T145103.200.json
-
-###
-
-GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
-Accept: application/json
-
-<> 2022-02-26T145058.200.json
-
-###
-
-GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
-Accept: application/json
-
-<> 2022-02-26T145036.200.json
-
-###
-
-GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
-Accept: application/json
-
-<> 2022-02-26T144808.200.json
 
 ###
 
