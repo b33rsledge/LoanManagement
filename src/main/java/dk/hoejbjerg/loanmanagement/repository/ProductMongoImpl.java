@@ -31,7 +31,7 @@ public class ProductMongoImpl implements ProductInteface {
         File file;
 
         try {
-            file = ResourceUtils.getFile("file:./data/LoanFacilityMockup.json");
+            file = ResourceUtils.getFile("file:./data/ProductMockup.json");
             if (file.exists()) {
                 logger.info("Initializing product data: Reading data");
                 Stream<String> lines = new String(Files.readAllBytes(file.toPath())).lines();

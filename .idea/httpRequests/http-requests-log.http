@@ -4,6 +4,86 @@ Content-Type: application/json
 
 {
     "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-28T152722.200.json
+
+###
+
+PUT http://localhost:8080/v1/product/2000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Jow jow",
+    "interestRate": 14.25,
+    "loanFee": 1500,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-02-28T151943.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    id: '',
+    description: 'Unsercured loan, 37-120 months',
+    interestRate: 14.25,
+    loanFee: 1500,
+    minimumTerm: 37,
+    maximumTerm: 120,
+    class: 'dk.hoejbjerg.loanmanagement.domain.Product'
+}
+
+<> 2022-02-28T151916.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+{
+    _id: '',
+    description: 'Unsercured loan, 37-120 months',
+    interestRate: 14.25,
+    loanFee: 1500,
+    minimumTerm: 37,
+    maximumTerm: 120,
+    _class: 'dk.hoejbjerg.loanmanagement.domain.Product'
+}
+
+<> 2022-02-28T151900.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/5000
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-02-28T151844.400.json
+
+###
+
+PUT http://localhost:8080/v1/product/2000
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
     "description": "Jow jow",
     "interestRate": 14.25,
     "loanFee": 1500,
@@ -355,13 +435,13 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    _id: '',
+    id: '',
     description: 'Unsercured loan, 37-120 months',
     interestRate: 14.25,
     loanFee: 1500,
     minimumTerm: 37,
     maximumTerm: 120,
-    _class: 'dk.hoejbjerg.loanmanagement.domain.Product'
+    class: 'dk.hoejbjerg.loanmanagement.domain.Product'
 }
 ###
 
