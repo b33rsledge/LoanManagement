@@ -20,7 +20,7 @@ COPY --chown=gradle:gradle ./ /root/service
 WORKDIR /root/service
 
 # Cleanup build directory
-RUN gradle clean
+# RUN gradle clean
 
 # Create the server daemon jar file to be used in the image
 RUN gradle bootJar
@@ -34,6 +34,7 @@ MAINTAINER Peter Højbjerg
 COPY --from=builder /root/service/build/libs/LoanManagement-0.0.1-SNAPSHOT.jar /usr/loanmgmt/service.jar
 COPY --from=builder /root/service/data/ProductMockup.json /usr/loanmgmt/data/ProductMockup.json
 COPY --from=builder /root/service/data/LoanFacilityMockup.json /usr/loanmgmt/data/LoanFacilityMockup.json
+COPY --from=builder /root/service/data/FeeTypeMockup.json /usr/loanmgmt/data/FeeTypeMockup.json
 
 #Expose port 8080 as default
 EXPOSE 8080
