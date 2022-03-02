@@ -20,7 +20,7 @@ COPY --chown=gradle:gradle ./ /root/service
 WORKDIR /root/service
 
 # Cleanup build directory
-# RUN gradle clean
+RUN gradle clean
 
 # Create the server daemon jar file to be used in the image
 RUN gradle bootJar
