@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.SKYCAVEDROPLET_PASSWORD }}
           port:   ${{ secrets.SKYCAVEDROPLET_PORT }}
           script: |
-            docker stack deploy --with-registry-auth -c /usr/loanmgmt/script-package/lm-stack.yml lmstack
+            docker stack deploy --with-registry-auth -c /usr/loanmgmt/script/lm-stack.yml lmstack
 
       # Runs a set of commands using the runners shell
       - name: Inspect docker stack lmstack after restart
