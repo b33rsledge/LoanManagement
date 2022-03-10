@@ -2,7 +2,7 @@ package dk.hoejbjerg.loanmanagement.controller;
 
 import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
-import dk.hoejbjerg.loanmanagement.repository.LoanFacilityMongoImpl;
+import dk.hoejbjerg.loanmanagement.repository.ILoanFacilityMongoImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +19,9 @@ import java.util.Objects;
 @RestController
 public class LoanFacilityController {
 
-    private final LoanFacilityMongoImpl loanFacilityStorage;
+    private final ILoanFacilityMongoImpl loanFacilityStorage;
 
-    public LoanFacilityController(LoanFacilityMongoImpl loanFacilityRepository) {
+    public LoanFacilityController(ILoanFacilityMongoImpl loanFacilityRepository) {
         this.loanFacilityStorage = loanFacilityRepository;
         this.loanFacilityStorage.initialize();
     }

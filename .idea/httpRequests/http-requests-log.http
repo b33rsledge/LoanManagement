@@ -1,3 +1,36 @@
+GET http://165.232.71.76:8080/v1/LoanFacility/30cbaccb-dd34-4b3b-83a7-64a8a5a1c7da
+Accept: application/json
+
+<> 2022-03-02T205046.200.json
+
+###
+
+GET http://165.232.71.76:8080/v1/feetype/45
+Accept: application/json
+
+<> 2022-03-02T205019.200.json
+
+###
+
+GET http://localhost:8080/v1/feetype/45
+Accept: application/json
+
+<> 2022-03-02T205001.200.json
+
+###
+
+GET http://165.232.71.76:8080/v1/LoanFacility/30cbaccb-dd34-4b3b-83a7-64a8a5a1c7da
+Accept: application/json
+
+<> 2022-03-02T204741.200.json
+
+###
+
+GET http://165.232.71.76:8080/v1/LoanFacility/30cbaccb-dd34-4b3b-83a7-64a8a5a1c7da
+Accept: application/json
+
+###
+
 PUT http://localhost:8080/v1/product/10
 Accept: application/json
 Content-Type: application/json
@@ -567,37 +600,6 @@ GET http://localhost:8080/v1/product/4000
 GET http://localhost:8080/v1/product/5000
 
 <> 2022-02-27T111349.404.json
-
-###
-
-GET http://localhost:8080/v1/product/1000
-
-<> 2022-02-27T111321.405.json
-
-###
-
-GET http://localhost:8080/v1/product/1000
-
-<> 2022-02-27T111253.405.json
-
-###
-
-GET http://localhost:8080/v1/product/5000
-
-<> 2022-02-27T111240.405.json
-
-###
-
-GET http://localhost:8080/v1/Product/1000
-
-<> 2022-02-27T111150.200.json
-
-###
-
-GET http://localhost:8080/v1/LoanFacility/3fa851a9-bb01-4ef2-ac45-2b53bbbf51eb
-Accept: application/json
-
-<> 2022-02-26T145109.200.json
 
 ###
 

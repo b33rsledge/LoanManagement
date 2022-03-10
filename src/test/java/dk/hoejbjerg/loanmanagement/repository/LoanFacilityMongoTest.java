@@ -26,13 +26,13 @@ import static org.junit.Assert.assertTrue;
  * @author Peter Højbjerg
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {LoanFacilityMongoImpl.class, Configuration.class})
+@SpringBootTest(classes = {ILoanFacilityMongoImpl.class, Configuration.class})
 
 @ContextConfiguration()
 public class LoanFacilityMongoTest {
 
     @Autowired
-    LoanFacilityMongoImpl storage;
+    ILoanFacilityMongoImpl storage;
 
     @BeforeEach
     public void setup() {

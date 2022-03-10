@@ -1,9 +1,7 @@
 package dk.hoejbjerg.loanmanagement.repository;
 
 import dk.hoejbjerg.loanmanagement.Configuration;
-import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
 import dk.hoejbjerg.loanmanagement.domain.Product;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -11,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -25,13 +21,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * @author Peter Højbjerg
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {ProductMongoImpl.class, Configuration.class})
+@SpringBootTest(classes = {IProductMongoImpl.class, Configuration.class})
 
 @ContextConfiguration()
 public class ProductMongoTest {
 
     @Autowired
-    ProductMongoImpl storage;
+    IProductMongoImpl storage;
 
     @BeforeEach
     public void setup() {

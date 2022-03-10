@@ -14,8 +14,8 @@ import java.nio.file.Files;
 import java.util.stream.Stream;
 
 @Repository
-public class ProductMongoImpl implements ProductInteface {
-    private static final Logger logger = LoggerFactory.getLogger(ProductMongoImpl.class);
+public class IProductMongoImpl implements IProduct {
+    private static final Logger logger = LoggerFactory.getLogger(IProductMongoImpl.class);
     private static final String collection = "product";
 
     @Resource(name = "mongoTemplate")

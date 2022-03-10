@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 
 @Repository
-public interface ProductInteface {
+public interface IProduct {
     /**
      * Identifcation of product collection
      */

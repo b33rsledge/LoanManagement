@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Repository
-public class LoanFacilityMongoImpl implements LoanFacilityInterface {
-    private static final Logger logger = LoggerFactory.getLogger(LoanFacilityMongoImpl.class);
+public class ILoanFacilityMongoImpl implements ILoanFacility {
+    private static final Logger logger = LoggerFactory.getLogger(ILoanFacilityMongoImpl.class);
 
     @Resource(name = "mongoTemplate")          // 'redisTemplate' is defined as a Bean in Configuration.java
     private MongoOperations mongoOperations;

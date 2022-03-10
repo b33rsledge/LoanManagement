@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface LoanFacilityInterface {
+public interface ILoanFacility {
 
     /**
      * Identification of collecton for loan facilities

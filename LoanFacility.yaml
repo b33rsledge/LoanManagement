@@ -1,11 +1,11 @@
 openapi: 3.0.3
 servers:
   - description: Loan Management Specification
-    url: http://msdo.hoejbjerg.family:8080/v1
+    url: http://165.232.71.76:8080/v1
 info:
-  description: API specification for Loan Management Facade service
+  description: API specification for Loan Management Service
   version: "1.0.0"
-  title: LoanMgmtFacadeAPI
+  title: Loan Facility Management API specifications
   contact:
     email: phg@live.dk
   license:
@@ -15,7 +15,31 @@ tags:
   - name: LoanFacility
     description: Loan facility operations
 paths:
-  /LoanFacility/{agreementId}:
+  /feetype/{id}:
+    get:
+      tags:
+        - feetype
+      summary: retrieve information about a feetype
+      description: feetype containes information about a fee, whics is associated with a product
+      parameters:
+        - in: path
+          name: id
+          description: identification of a feetype
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/feeItem'
+        '400':
+          description: 'bad input parameter'
+  /LoanFacility/{id}:
     get:
       tags:
         - LoanFacility
@@ -24,7 +48,7 @@ paths:
         LirumLarum
       parameters:
         - in: path
-          name: agreementId
+          name: id
           description: agreement key for looking loan facility information
           required: true
           schema:
@@ -40,16 +64,16 @@ paths:
                   $ref: '#/components/schemas/agreementItem'
         '400':
           description: 'bad input parameter'
-  /ProductManagement/{productTypeId}:
+  /product/{id}:
     get:
       tags:
-        - ProductManagement
+        - product
       summary: Retrieve information on product type
       description: |
         LirumLarum
       parameters:
         - in: path
-          name: productTypeId
+          name: id
           description: Key for a product type
           required: true
           schema:
@@ -67,12 +91,12 @@ paths:
           description: 'bad input parameter'
     put:
       tags:
-        - ProductManagement
+        - product
       summary: Update information about a producttype, making changes to a product type, may infer updates to all related loan facilities
       description: Lirum Larum
       parameters:
         - in: path
-          name: productTypeId
+          name: id
           description: agreement to update
           required: true
           schema:
@@ -132,3 +156,26 @@ components:
           description: fee for establishing a loan facility of this type
           type: number
           example: 1000,00
+    feeItem:
+      type: object
+      required:
+        - id
+        - description
+        - frequency
+        - amount
+      properties:
+        id:
+          description: Idenfier of the feetype
+        description:
+          description: Desciption of the feetype
+          type: string
+          example: LirumLarum
+        amount:
+          description: amount which must be paid for each "frequency"
+          type: number
+          example: 5.0
+        frequency:
+          description: amount of the feetype must be paid for each frequency
+          type: string
+          enum: [Once, Monthly, Quarterly, SemiAnually, Anually]
+

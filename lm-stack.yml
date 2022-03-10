@@ -1,5 +1,5 @@
 version: '3.4'
-# Usage for caveservice
+# Usage for loan management service
 
 #  -- After update just run deploy again
 #   docker stack deploy --with-registry-auth -c lm-stack.yml lmstack
@@ -19,6 +19,7 @@ services:
       spring.data.mongodb.password: "CamelsWithFeelings"
       spring.data.mongodb.username: "lmadmin"
       spring.data.mongodb.authentication-database: "admin"
+
 
       # Message queue configuration
       spring.rabbitmq.host: rabbitmq
@@ -56,7 +57,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: lmadmin
       MONGO_INITDB_ROOT_PASSWORD: CamelsWithFeelings
     volumes:
-      - lm_ms_data:/data/cs/mongo
+      - lm_ms_data:/data/db
     networks:
       - lm-network
     ports:
@@ -70,19 +71,6 @@ services:
         limits:
           cpus: "0.1"
           memory: 1000M
-  mongo-express:
-    image: mongo-express
-    depends_on:
-      - mongoservice
-    restart: always
-    ports:
-      - 8081:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: lmadmin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: CamelsWithFeelings
-      ME_CONFIG_MONGODB_URL: mongodb://lmadmin:CamelsWithFeelings@mongoservice:27017
-    networks:
-      - lm-network
   rabbitmq:
     image: rabbitmq:3.9-management
     ports:
@@ -91,12 +79,16 @@ services:
     volumes:
       - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
       - ./rabbitmq/etc/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
-      - ./rabbitmq/data/:/var/lib/rabbitmq/
-      - ./rabbitmq/log/:/var/log/rabbitmq
+      - rabbit_data:/var/lib/rabbitmq/
+      - rabbit_log:/var/log/rabbitmq/
     networks:
       - lm-network
 volumes:
   lm_ms_data:
+    external: false
+  rabbit_data:
+    external: false
+  rabbit_log:
     external: false
 networks:
   lm-network: {}

@@ -2,24 +2,11 @@ package dk.hoejbjerg.loanmanagement.controller;
 
 import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.FeeType;
-import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
-import dk.hoejbjerg.loanmanagement.domain.Product;
-import dk.hoejbjerg.loanmanagement.repository.FeeTypeMongoImpl;
-import dk.hoejbjerg.loanmanagement.repository.LoanFacilityMongoImpl;
-import dk.hoejbjerg.loanmanagement.repository.LoanFacilityPagination;
-import dk.hoejbjerg.loanmanagement.repository.ProductMongoImpl;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import dk.hoejbjerg.loanmanagement.repository.IFeeTypeMongoImpl;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -30,9 +17,9 @@ import java.util.Objects;
 @RestController
 public class FeeTypeController {
 
-    private final FeeTypeMongoImpl feetypeRepository;
+    private final IFeeTypeMongoImpl feetypeRepository;
 
-    public FeeTypeController(FeeTypeMongoImpl feetypeRepository) {
+    public FeeTypeController(IFeeTypeMongoImpl feetypeRepository) {
         this.feetypeRepository = feetypeRepository;
         this.feetypeRepository.initialize();
     }

@@ -5,11 +5,11 @@ import dk.hoejbjerg.loanmanagement.domain.Product;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FeeTypeInterface {
+public interface IFeeType {
     /**
      * Identifcation of product collection
      */
-    String collection = "feetype";
+    String collection = "feeType";
 
     /**
      * initialize - loads example data from file if no collection exists

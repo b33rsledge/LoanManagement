@@ -4,8 +4,8 @@ import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
 import dk.hoejbjerg.loanmanagement.repository.LoanFacilityPagination;
 import dk.hoejbjerg.loanmanagement.domain.Product;
-import dk.hoejbjerg.loanmanagement.repository.LoanFacilityMongoImpl;
-import dk.hoejbjerg.loanmanagement.repository.ProductMongoImpl;
+import dk.hoejbjerg.loanmanagement.repository.ILoanFacilityMongoImpl;
+import dk.hoejbjerg.loanmanagement.repository.IProductMongoImpl;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.data.domain.PageRequest;
@@ -28,11 +28,11 @@ import java.util.Objects;
 @RestController
 public class ProductController {
 
-    private final ProductMongoImpl productRepository;
-    private final LoanFacilityMongoImpl loanRepository;
+    private final IProductMongoImpl productRepository;
+    private final ILoanFacilityMongoImpl loanRepository;
     private final RabbitController productQueue;
 
-    public ProductController(ProductMongoImpl productRepository, LoanFacilityMongoImpl loanRepository, RabbitTemplate rabbitTemplate, Queue queue) {
+    public ProductController(IProductMongoImpl productRepository, ILoanFacilityMongoImpl loanRepository, RabbitTemplate rabbitTemplate, Queue queue) {
         this.productRepository = productRepository;
         this.productRepository.initialize();
         this.loanRepository = loanRepository;
@@ -84,12 +84,16 @@ public class ProductController {
 
             if (product != null) {
 
-                // Retrieve first page
-                LoanFacilityPagination lPage = loanRepository.getFacilitiesByProductPageable(id, PageRequest.of(0, 500, Sort.by("id").descending()));
+                // Retrieve first page - 500 documents at a time
+                LoanFacilityPagination lPage =  loanRepository.getFacilitiesByProductPageable(id,
+                        PageRequest.of(0, 500,
+                        Sort.by("id").descending()));
+
                 while (!lPage.getPageList().isEmpty()) {
                     List<LoanFacility> list = lPage.getPageList();
-                    for (LoanFacility loan : list) productQueue.publishLoanFacility(loan);
-
+                    // Publish loan facilities on queue
+                    for (LoanFacility loan : list)
+                        productQueue.publishLoanFacility(loan);
                     // Retrieve consecutive pages
                     lPage = loanRepository.getFacilitiesByProductPageable(id, lPage.getPageable().next());
                 }

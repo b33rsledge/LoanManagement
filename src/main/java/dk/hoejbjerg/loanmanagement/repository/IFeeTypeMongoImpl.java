@@ -2,7 +2,6 @@ package dk.hoejbjerg.loanmanagement.repository;
 
 import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.FeeType;
-import dk.hoejbjerg.loanmanagement.domain.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.mongodb.core.MongoOperations;
@@ -15,8 +14,8 @@ import java.nio.file.Files;
 import java.util.stream.Stream;
 
 @Repository
-public class FeeTypeMongoImpl implements FeeTypeInterface {
-    private static final Logger logger = LoggerFactory.getLogger(FeeTypeMongoImpl.class);
+public class IFeeTypeMongoImpl implements IFeeType {
+    private static final Logger logger = LoggerFactory.getLogger(IFeeTypeMongoImpl.class);
 
     @Resource(name = "mongoTemplate")
     private MongoOperations feetypeMongo;

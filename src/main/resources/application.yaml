@@ -3,7 +3,7 @@ spring:
     banner-mode: off
   data:
     mongodb:
-      host: "localhost"
+      host: "165.232.71.76"
       database: "LoanManagement"
       port:  27017
       password: CamelsWithFeelings
