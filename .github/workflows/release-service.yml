@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.SKYCAVEDROPLET_PASSWORD }}
           port:   ${{ secrets.SKYCAVEDROPLET_PORT }}
           script: |
-            docker stack deploy --with-registry-auth -c /usr/loanmgmt/script/lm-stack.yml lmstack
+            docker stack deploy --with-registry-auth -c /usr/loanmgmt/lm-stack.yml lmstack
 
       # dockument in the build log that the services are indeed running on digital ocean swarm master defined by {secrets}
       - name: Inspect docker stack lmstack after restart
