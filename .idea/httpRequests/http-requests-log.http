@@ -1,3 +1,141 @@
+PUT http://localhost:8080/v1/product/15
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "feeType": 12,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+PUT http://localhost:8080/v1/product/15
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "feeType": 12,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+PUT http://localhost:8080/v1/product/15
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "feeType": 12,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+<> 2022-03-23T194516.200.json
+
+###
+
+PUT http://165.232.71.76:8080/v1/product/15
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "feeType": 12,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+PUT http://165.232.71.76:8080/v1/product/10
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+PUT http://localhost:8080/v1/product/15
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "feeType": 12,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+GET http://165.232.71.76:8080/v1/feetype/45
+Accept: application/json
+
+<> 2022-03-23T192821.200.json
+
+###
+
+PUT http://165.232.71.76:8080/v1/product/10
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": "",
+    "description": "Changing loan conditions",
+    "interestRate": 14.25,
+    "loanFee": 20,
+    "minimumTerm": 37,
+    "maximumTerm": 120,
+    "class": "dk.hoejbjerg.loanmanagement.domain.Product"
+}
+
+###
+
+GET http://165.232.71.76:8080/v1/feetype/45
+Accept: application/json
+
+<> 2022-03-23T192039.200.json
+
+###
+
+GET http://localhost:8080/v1/feetype/45
+Accept: application/json
+
+###
+
 GET http://165.232.71.76:8080/v1/LoanFacility/30cbaccb-dd34-4b3b-83a7-64a8a5a1c7da
 Accept: application/json
 
@@ -12,7 +150,7 @@ Accept: application/json
 
 ###
 
-GET http://localhost:8080/v1/feetype/45
+GET http://165.232.71.76:8080/v1/feetype/45
 Accept: application/json
 
 <> 2022-03-02T205001.200.json
@@ -31,7 +169,7 @@ Accept: application/json
 
 ###
 
-PUT http://localhost:8080/v1/product/10
+PUT http://165.232.71.76:8080/v1/product/10
 Accept: application/json
 Content-Type: application/json
 
@@ -424,7 +562,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/v1/product/5000
+PUT http://localhost:8080/v1/product/83
 Accept: application/json
 Content-Type: application/json
 
@@ -540,66 +678,6 @@ Accept: application/json
 Content-Type: application/json
 
 <> 2022-02-27T111628.400.json
-
-###
-
-GET http://localhost:8080/v1/product/1000
-
-<> 2022-02-27T111436-2.200.json
-
-###
-
-GET http://localhost:8080/v1/product/2000
-
-<> 2022-02-27T111436-1.200.json
-
-###
-
-GET http://localhost:8080/v1/product/3000
-
-<> 2022-02-27T111436.200.json
-
-###
-
-GET http://localhost:8080/v1/product/4000
-
-<> 2022-02-27T111435.200.json
-
-###
-
-GET http://localhost:8080/v1/product/5000
-
-<> 2022-02-27T111435.404.json
-
-###
-
-GET http://localhost:8080/v1/product/1000
-
-<> 2022-02-27T111409.200.json
-
-###
-
-GET http://localhost:8080/v1/product/2000
-
-<> 2022-02-27T111407.200.json
-
-###
-
-GET http://localhost:8080/v1/product/3000
-
-<> 2022-02-27T111404.200.json
-
-###
-
-GET http://localhost:8080/v1/product/4000
-
-<> 2022-02-27T111359.200.json
-
-###
-
-GET http://localhost:8080/v1/product/5000
-
-<> 2022-02-27T111349.404.json
 
 ###
 

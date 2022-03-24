@@ -3,7 +3,7 @@ spring:
     banner-mode: off
   data:
     mongodb:
-      host: "165.232.71.76"
+      host: "localhost"
       database: "LoanManagement"
       port:  27017
       password: CamelsWithFeelings
@@ -35,5 +35,5 @@ server:
   error:
     include-message: always
   port: 8080
-debug: false
+debug: true
 

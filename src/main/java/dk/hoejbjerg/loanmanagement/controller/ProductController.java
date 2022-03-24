@@ -86,7 +86,7 @@ public class ProductController {
 
                 // Retrieve first page - 500 documents at a time
                 LoanFacilityPagination lPage =  loanRepository.getFacilitiesByProductPageable(id,
-                        PageRequest.of(0, 25000,
+                        PageRequest.of(0, 10000,
                         Sort.by("id").descending()));
 
                 while (!lPage.getPageList().isEmpty()) {
