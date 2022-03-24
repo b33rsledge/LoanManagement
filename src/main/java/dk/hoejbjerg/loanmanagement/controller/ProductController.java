@@ -6,6 +6,8 @@ import dk.hoejbjerg.loanmanagement.repository.LoanFacilityPagination;
 import dk.hoejbjerg.loanmanagement.domain.Product;
 import dk.hoejbjerg.loanmanagement.repository.ILoanFacilityMongoImpl;
 import dk.hoejbjerg.loanmanagement.repository.IProductMongoImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.data.domain.PageRequest;
@@ -27,6 +29,7 @@ import java.util.Objects;
  */
 @RestController
 public class ProductController {
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     private final IProductMongoImpl productRepository;
     private final ILoanFacilityMongoImpl loanRepository;
@@ -96,6 +99,55 @@ public class ProductController {
                         productQueue.publishLoanFacility(loan);
                     // Retrieve consecutive pages
                     lPage = loanRepository.getFacilitiesByProductPageable(id, lPage.getPageable().next());
+                }
+
+                URI location = ServletUriComponentsBuilder.fromCurrentRequest().build().toUri();
+
+                return ResponseEntity.ok()
+                        .header("location", location.toString())
+                        .body(new Gson().toJson(product));
+            } else {
+                return new ResponseEntity<>("Somehting went wrong", HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>("Invalid request", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping(path = "/v2/product/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> updateProductv2(@PathVariable String id, @RequestBody Product product) {
+
+
+
+        try {
+            product = productRepository.updateProduct(id, product);
+
+            if (product != null) {
+
+                // Retrieve first page - 500 documents at a time
+                long begin = System.currentTimeMillis();
+
+                LoanFacilityPagination lPage =  loanRepository.getFacilityPage(id,
+                        PageRequest.of(0, 2000,
+                                Sort.by("id").descending()));
+
+
+                while (!lPage.getPageList().isEmpty()) {
+                    List<LoanFacility> list = lPage.getPageList();
+                    // Publish loan facilities on queue
+                    for (LoanFacility loan : list)
+                        productQueue.publishLoanFacility(loan);
+                    // Retrieve consecutive pages
+
+
+                    long time = System.currentTimeMillis() - begin;
+                    logger.info("PAGE:" + lPage.getPageable().getPageNumber() + " - Elapsed time: " +time + " in milli seconds");
+
+                    begin = System.currentTimeMillis();
+                    lPage = loanRepository.getFacilityPage(id, lPage.getPageable().next());
                 }
 
                 URI location = ServletUriComponentsBuilder.fromCurrentRequest().build().toUri();

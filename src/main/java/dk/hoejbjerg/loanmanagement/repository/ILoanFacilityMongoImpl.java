@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import dk.hoejbjerg.loanmanagement.domain.LoanFacility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -98,6 +99,21 @@ public class ILoanFacilityMongoImpl implements ILoanFacility {
         lPage.setPageable(pageable);
         return lPage;
     }
+
+    @Override
+    public LoanFacilityPagination getFacilityPage(String productId, Pageable pageable) {
+
+        Query query = new Query()
+                .addCriteria(Criteria.where("ProductTypeId").is(productId))
+                .with(pageable);
+
+        LoanFacilityPagination lPage = new LoanFacilityPagination();
+        lPage.setPageList(mongoOperations.find(query, LoanFacility.class));
+
+        lPage.setPageable(pageable);
+        return lPage;
+    }
+
 }
 
 

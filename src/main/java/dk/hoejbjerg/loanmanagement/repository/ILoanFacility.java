@@ -49,6 +49,8 @@ public interface ILoanFacility {
      *         list of  loan facilities
      */
     LoanFacilityPagination getFacilitiesByProductPageable(String productId, Pageable pageable);
+
+     LoanFacilityPagination getFacilityPage(String productId, Pageable pageable);
 }
 
 
